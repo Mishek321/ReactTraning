@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import {BrowserRouter,Routes,Route, Form} from 'react-router-dom'
-import Rform from '../src/form'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Rform from './register'
 import Home from '../src/home'
+import Login from '../src/login'
+import Form from '../src/form/Form'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -15,8 +15,11 @@ function App() {
       <Routes>
         <Route path='/' element={<h1>This is home page</h1>} />
         <Route path='/about' element={<h1>This is about page</h1>} />
-        <Route path='/form' element={<Rform/>} />
+        <Route path='/register' element={<Rform/>} />
         <Route path='/home' element={<Home/>} />
+        <Route path='/login' element={<Login/>}/>
+      
+        
       </Routes>
     </BrowserRouter>
     </>
